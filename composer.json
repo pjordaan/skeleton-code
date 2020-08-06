@@ -1,0 +1,12 @@
+{
+    "name": "pjordaan/skeleton-code",
+    "description": "skeleton code",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Pieter Jordaan",
+            "email": "pieter.jordaan@way2web.nl"
+        }
+    ],
+    "require": {}
+}
