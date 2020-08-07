@@ -65,6 +65,16 @@ class Installer
         return $composerDefinition;
     }
 
+    private static function ask(IOInterface $io, string $question, string $default) : string
+    {
+        $ask = [
+            sprintf("\n<question>%s</question>\n", $question),
+            sprintf("\n(<comment>%s</comment>):", $default)
+        ];
+
+        return $io->ask($ask, $default);
+    }
+
     private static function camel2dashed(string $name) : string
     {
         return strtolower(preg_replace('/([a-zA-Z])(?=[A-Z])/', '$1-', $name));

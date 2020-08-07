@@ -9,7 +9,8 @@
         }
     ],
     "autoload": {
-        "Pjordaan\\Installer\\": "Installer/"
+        "psr-4": {
+        "Pjordaan\\Installer\\": "Installer/"}
     },
     "scripts": {
         "pre-install-cmd": [
@@ -27,5 +28,7 @@
             "composer update"
         ]
     },
-    "require": {}
+    "require": {
+        "php": "7.4.*"
+    }
 }
