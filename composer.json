@@ -8,5 +8,24 @@
             "email": "pieter.jordaan@way2web.nl"
         }
     ],
+    "autoload": {
+        "Pjordaan\\Installer\\": "Installer/"
+    },
+    "scripts": {
+        "pre-install-cmd": [
+            "Pjordaan\\Installer\\Installer::preInstall"
+        ],
+        "post-install-cmd": [
+            "Pjordaan\\Installer\\Installer::postInstall",
+            "composer update"
+        ],
+        "pre-update-cmd": [
+            "Pjordaan\\Installer\\Installer::preInstall"
+        ],
+        "post-create-project-cmd": [
+            "Pjordaan\\Installer\\Installer::postInstall",
+            "composer update"
+        ]
+    },
     "require": {}
 }
